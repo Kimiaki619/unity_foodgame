@@ -32,7 +32,15 @@ public class CutCucumber : MonoBehaviour
             emptyObject.transform.parent = col.gameObject.transform;
              transform.parent = emptyObject.transform;
         }
+        //一回当たったCutCucumber(Clone)が消えてしまうと当たったCutCucumber(Clone)全てが消えてしまう。
+      if (transform.parent == null && col.gameObject.name == "CutCucumber(Clone)") {
+            var emptyObject = new GameObject();
+            emptyObject.transform.parent = col.gameObject.transform;
+             transform.parent = emptyObject.transform;
+        }
+
       }
+      
  
       void OnCollisionExit(Collision col) {
       if (transform.parent != null && col.gameObject.name == "DishCube") {
