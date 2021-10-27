@@ -26,6 +26,7 @@ public class CutCucumber : MonoBehaviour
     
     //一緒に動くプログラムらしいけど解読ができてない
     //「空のオブジェクト」の小p部へくととなって、床と同一の動きを保つ（落下時の変形を防ぐため）
+    //OnCollisionEnterは衝突判定の時に扱う
     void OnCollisionEnter(Collision col) {
       if (transform.parent == null && col.gameObject.name == "DishCube") {
             var emptyObject = new GameObject();
