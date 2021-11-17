@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 public class SlicerController : MonoBehaviour
 {   
@@ -17,7 +16,7 @@ public class SlicerController : MonoBehaviour
         if (Input.GetKey (KeyCode.RightArrow)) {
             transform.Translate (0.1f, 0, 0);
         }
-        if (transform.position.x <= 0.05 & transform.position.x >= -0.05) {
+        if (transform.position.x <= 0.045 & transform.position.x >= -0.045) {
             Instantiate (CutCucumberPrefab, transform.position, Quaternion.identity);
         }
     }

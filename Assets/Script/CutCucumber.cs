@@ -5,6 +5,8 @@ using UnityEngine;
 public class CutCucumber : MonoBehaviour
 {
     private Rigidbody rb;
+    //ここにライフを入れる
+    public GameObject heart;
 
     //start画面の時
     void Strat()
@@ -20,21 +22,15 @@ public class CutCucumber : MonoBehaviour
         
         //画面外になったら消すようにする。
         if (transform.position.y < -5) {
-            Destroy (gameObject);
+            Destroy(gameObject);
         }        
     }
     
     //一緒に動くプログラムらしいけど解読ができてない
     //「空のオブジェクト」の小p部へくととなって、床と同一の動きを保つ（落下時の変形を防ぐため）
-    //OnCollisionEnterは衝突判定の時に扱う
+    //OnCollisionEnterは当たった時に呼ばれる関数
     void OnCollisionEnter(Collision col) {
       if (transform.parent == null && col.gameObject.name == "DishCube") {
-            var emptyObject = new GameObject();
-            emptyObject.transform.parent = col.gameObject.transform;
-             transform.parent = emptyObject.transform;
-        }
-        //一回当たったCutCucumber(Clone)が消えてしまうと当たったCutCucumber(Clone)全てが消えてしまう。
-      if (transform.parent == null && col.gameObject.name == "CutCucumber(Clone)") {
             var emptyObject = new GameObject();
             emptyObject.transform.parent = col.gameObject.transform;
              transform.parent = emptyObject.transform;
