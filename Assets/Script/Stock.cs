@@ -11,8 +11,7 @@ public class Stock : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Stock",3);
-        PlayerPrefs.Save();
+        
     }
 
     // Update is called once per frame

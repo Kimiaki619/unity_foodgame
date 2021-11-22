@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // UnityEngine.SceneManagemntの機能を使用
 
 public class CutCucumber : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class CutCucumber : MonoBehaviour
              score = PlayerPrefs.GetInt("Score",0);
              PlayerPrefs.SetInt("Score",score+100);
              PlayerPrefs.Save ();
+             //ステージ遷移。一瞬で変わってしまう。クリアーや開始画面など何か処理を挟む必要
+             SceneManager.LoadScene(Stage.Stage_dict[SceneManager.GetActiveScene().name]);
+             
         }
 
       }

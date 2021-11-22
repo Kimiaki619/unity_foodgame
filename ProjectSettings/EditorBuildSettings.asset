@@ -18,15 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/ThreeLebel.unity
     guid: f303208477a2a4c00805086b126c4577
   - enabled: 1
-    path: Assets/Scenes/SixLabel.unity
+    path: Assets/Scenes/SixLebel.unity
     guid: 38307cf9dcf00417e915a93f19860cbc
   - enabled: 1
-    path: Assets/Scenes/SevenLabel.unity
+    path: Assets/Scenes/SevenLebel.unity
     guid: 50a21105670d04e21871d96db16d6667
   - enabled: 1
-    path: Assets/Scenes/FrothLebel.unity
+    path: Assets/Scenes/ForthLebel.unity
     guid: 15b979bd27e6d460da44b6ea8bd1a9d3
   - enabled: 1
-    path: Assets/Scenes/FiveLabel.unity
+    path: Assets/Scenes/FiveLebel.unity
     guid: 5024b0c46c63d4f0e8fa75d81c97ccf8
   m_configObjects: {}
